@@ -1,14 +1,14 @@
 
 <!DOCTYPE html>
+{% verbatim %}
 <html id='app' ng-app="app1">
 <head>
   <title>project</title>
   <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.1/angular.min.js" ></script>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
-  <script type="text/javascript" src="main.js"></script>
-  <script src="lib/angular/angular.js"></script>
-  <script src="lib/angular-route/angular-route.js"></script>
-  <script src="app.js"></script>
+  <script src="static/lib/angular-route/angular-route.js"></script>
+  <script src="static/main.js"></script>
+  <script src="static/app.js"></script>
 
 
 </head>
@@ -36,9 +36,10 @@ search <input type="text" ng-model="searching">
     <tr ng-repeat="nam in data1 | filter : searching ">
        <th><h1>{{nam["flightNumber"]}}</h1></th>
        <th><h1>{{nam[val]}}</h1></th>
-       <th> <img src="{{nam.image}}" width="345px"
+       <th> <img ng-src="static/{{nam.image}}" width="345px"
     height="201px"></th> 
     <tr>
   </table>  
 </body>
+{% endverbatim %}
 </html>
